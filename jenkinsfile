@@ -13,7 +13,7 @@ pipeline {
         }
         stage ('deploy') {
             steps {
-                deploy adapters: [tomcat9(credentialsId: 'dde50455-36bb-4ec3-a6f7-d92f5490e503', path: '', url: 'http://172.31.2.221:8080')], contextPath: 'qaapp', war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'dde50455-36bb-4ec3-a6f7-d92f5490e503', path: '', url: 'http://172.31.2.221:8080')], contextPath: 'app', war: '**/*.war'
             }
         }
     }
